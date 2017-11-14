@@ -5,7 +5,8 @@ div.dice {
   float: left;
   text-align: center;
   font-size: 30px;
-  width: 33px;
+  width: 200px;
+  height: 60px;
   background: ghostwhite;
   border: solid black;
   padding: 10px;

@@ -1,5 +1,28 @@
+
+
+
 // $ (() => {
 $(document).ready(function() {
+	// $diceImages = [
+	// 	  {
+	// 	    img: 'img/p1d1.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d2.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d3.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d4.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d5.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d6.png'
+	// 	  }
+	// 	]
 
 //this allows the user to enter their screen name of choice
 $(document).on('click', '#enterButton', function() {
@@ -7,9 +30,13 @@ $(document).on('click', '#enterButton', function() {
 //add screen name to body of site
     $('#enterScreenName').appendTo('body');
 
-    $('#enterButton').click(function(){
-
-    // $('#hide').click('#enterButton', function () {
+    // $('#enterButton').click(function(){
+      $("#enterButton").on("click", function() {
+        $(this).hide();
+        $("#firstText").hide("slow");
+        $("#enterButton").hide("slow");
+        return false;
+      });    // $('#hide').click('#enterButton', function () {
     //   $('p').hide();
     //     alert("The paragraph is now hidden");
     //   });
@@ -18,31 +45,75 @@ $(document).on('click', '#enterButton', function() {
   //         $(this).parents(".ex").hide("slow");
   //     });
   // });
-    });
+    // });
       });
 //add player 2 (not yet functional)
     // let p2 = $('#p2').val();
     // $('#p2').appendTo('body');
 
 $(document).on('click', '#btn', function() {
+	// $diceImages = [
+	// 	  {
+	// 	    img: 'img/p1d1.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d2.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d3.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d4.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d5.png'
+	// 	  },
+	// 	  {
+	// 	    img: 'img/p1d6.png'
+	// 	  }
+	// 	]
 
 //this creates a button that allows the user to roll 3 dice
 // $('#btn').click()
 //i want function to callBack
   // let roll1 =  {
+	function changeImage(){
+	        var image = document.getElementByClass("diceImg");
+	        switch(Math.random()){
+	        case 1 :
+	            image.src = "p1d1.png";
+	            break;
+	        case 2 :
+	            image.src = "p1d2.png";
+	            break;
+	        case 3:
+	            image.src = "p1d3.png";
+	            break;
+	            // document.getElememtById("image_change_button").innerHTML = Math.random();
+	        }
+	    }
 
 
 
-
-
-  //this is designed to make the 3 dice roll randomly between 1-6
+// let $randomDice = function () {
   let $d1 = Math.floor(Math.random() * 5) + 1;
   let $d2 = Math.floor(Math.random() * 5) + 1;
   let $d3 = Math.floor(Math.random() * 5) + 1;
+  //this is designed to make the 3 dice roll randomly between 1-6
+//   let $d1 = $diceImages[Math.floor(Math.random() * ($diceImages.length))];
+//   let $d2 = $diceImages[Math.floor(Math.random() * ($diceImages.length))];
+//   let $d3 = $diceImages[Math.floor(Math.random() * ($diceImages.length))];
+// }
+// var $getDiceValues = function() {
+// 		$d1 = parseInt($('$diceImages').attr('src')[11]);
+// 		$d2 = parseInt($('$diceImages').attr('src')[11]);
+// 		$d3 = parseInt($('$diceImages').attr('src')[11]);
 
-  console.log($d1);
-  console.log($d2);
-  console.log($d3);
+	// };
+
+  // console.log($d1);
+  // console.log($d2);
+  // console.log($d3);
 
 
 

@@ -8,6 +8,29 @@ img {
   height: 15px;
   width: 15px;
 }
+#play {
+  float: left;
+    transition: .5s ease;
+    top: 10%;
+    left: 50%;
+    padding-top: -900px;
+    margin-top: -20px;
+}
+#pause {
+  float: left;
+    transition: .5s ease;
+    top: 10%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: 50px;
+}
+img {
+  float: left;
+  margin-left: 80px;
+  height: 100px;
+  width: 100px;
+  padding-right: 50px;
+}
 .dice {
   float: left;
   text-align: center;
@@ -22,11 +45,32 @@ img {
   padding: 10px;
   margin: 5px;
 }
-div.button {
+.p2dice {
+  float: left;
   text-align: center;
   align-items: center;
   align-content: center;
   align-self: center;
+  font-size: 30px;
+  width: 200px;
+  height: 60px;
+  background: ghostwhite;
+  border: solid black;
+  padding: 10px;
+  margin: 5px;
+}
+div.#btn {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+#enterScreenName {
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  background-color: lightblue;
 }
 #firstText h5 {
   text-align: center;
@@ -47,4 +91,8 @@ div.button {
 @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+div.button.clear {
+  clear: both;
 }
